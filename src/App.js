@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Products from "./components/Products";
+import Promise from "./components/Promise";   // ✅ New component
 import Benefits from "./components/Benefits";
 import Gallery from "./components/Gallery";
 import Stats from "./components/Stats";
@@ -21,6 +22,7 @@ function App() {
       <Hero />
       <About />
       <Products />
+      <Promise />   {/* ✅ Added here */}
       <Benefits />
       <Gallery />
       <Stats />
