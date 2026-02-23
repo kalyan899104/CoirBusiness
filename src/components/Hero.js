@@ -1,7 +1,11 @@
 import React from "react";
+import "./Hero.css"; // ✅ make sure you have this file
 
 const Hero = () => (
-  <section className="hero">
+  <section 
+    className="hero"
+    style={{ backgroundImage: 'url("/Images/Bags.jpg")' }}  // ✅ use your image here
+  >
     <div className="hero-content">
       <h1>Sri Ecovibe Substrates</h1>
       <p>
