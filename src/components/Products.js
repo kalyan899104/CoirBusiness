@@ -8,7 +8,7 @@ function Products() {
       <div className="product-grid">
         {/* Existing product cards */}
         <div className="product-card">
-          <img src="product1.jpg" alt="Coir Substrate" />
+          <img src="/Images/CoirSubstrate.jpg" alt="Coir Substrate" />
           <h3>Coir Substrate</h3>
           <p>
             A natural, sustainable growing medium made from coconut husk. 
@@ -16,7 +16,7 @@ function Products() {
           </p>
         </div>
         <div className="product-card">
-          <img src="product2.jpg" alt="Eco Grow Bags" />
+          <img src="/Images/Growbags.jpg" alt="Eco Grow Bags" />
           <h3>Eco Grow Bags</h3>
           <p>
             Durable, eco-friendly bags designed for modern farming. 
@@ -24,7 +24,7 @@ function Products() {
           </p>
         </div>
         <div className="product-card">
-          <img src="product3.jpg" alt="Support Services" />
+          <img src="/Images/SupportServices.jpg" alt="Support Services" />
           <h3>Support Services</h3>
           <p>
             Expert guidance and assistance for sustainable cultivation. 
@@ -32,7 +32,7 @@ function Products() {
           </p>
         </div>
 
-        {/* New product cards using your images */}
+        {/* New product cards */}
         <div className="product-card">
           <img src="/Images/CoirProducts.jpg" alt="Coir Products" />
           <h3>Coir Products</h3>
@@ -50,7 +50,7 @@ function Products() {
           </p>
         </div>
         <div className="product-card">
-          <img src="/Images/Pithblock.jpg" alt="Pith Block" />
+          <img src="/Images/Pithblock.jpg" alt="Coir Pith Block" />
           <h3>Pith Block</h3>
           <p>
             Compressed coir pith blocks that expand when hydrated, 
@@ -63,6 +63,40 @@ function Products() {
           <p>
             Showcasing diverse uses of coir products in farming, 
             horticulture, and eco-friendly living.
+          </p>
+        </div>
+
+        {/* Remaining images */}
+        <div className="product-card">
+          <img src="/Images/Coirbasket.jpg" alt="Coir Basket Product" />
+          <h3>Coir Basket Product</h3>
+          <p>
+            Handcrafted coir baskets designed for durability and 
+            eco-friendly gardening.
+          </p>
+        </div>
+        <div className="product-card">
+          <img src="/Images/Coirpoles.jpg" alt="Coir Poles" />
+          <h3>Coir Poles</h3>
+          <p>
+            Natural coir poles that support plant growth and 
+            encourage healthy climbing.
+          </p>
+        </div>
+        <div className="product-card">
+          <img src="/Images/Coirrope.jpg" alt="Coir Rope" />
+          <h3>Coir Rope</h3>
+          <p>
+            Strong, biodegradable coir ropes suitable for 
+            agriculture and packaging.
+          </p>
+        </div>
+        <div className="product-card">
+          <img src="/Images/husk.jpg" alt="Coconut Husk" />
+          <h3>Coconut Husk</h3>
+          <p>
+            Raw coconut husk material, versatile for eco-friendly 
+            applications and soil conditioning.
           </p>
         </div>
       </div>

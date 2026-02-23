@@ -22,7 +22,7 @@
   transform: scale(1.05);
 }
 
-/* Caption overlay using alt text */
+/* Caption overlay */
 .gallery-item::after {
   content: attr(data-alt); /* pulls alt text from Gallery.js */
   position: absolute;
@@ -30,13 +30,34 @@
   left: 0; right: 0;
   background: rgba(0,0,0,0.6);
   color: #fff;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
+  font-weight: 500;
   padding: 8px;
   text-align: center;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transform: translateY(100%);
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .gallery-item:hover::after {
   opacity: 1;
+  transform: translateY(0); /* smooth slide-up effect */
+}
+section h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+section h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #4CAF50; /* eco-friendly green accent */
+  margin: 12px auto 0;
+  border-radius: 2px;
 }

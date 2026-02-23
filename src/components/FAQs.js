@@ -1,4 +1,6 @@
 import React from "react";
+import "./FAQ.css";
+
 
 const faqs = [
   { q: "Are coir products biodegradable?", a: "Yes, they are 100% natural and biodegradable." },

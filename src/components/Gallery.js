@@ -6,10 +6,13 @@ const images = [
   { src: "/Images/Coirpoles.jpg", alt: "Coir Poles" },
   { src: "/Images/Coirrope.jpg", alt: "Coir Rope" },
   { src: "/Images/husk.jpg", alt: "Coconut Husk" },
-  { src: "/Images/Bags.jpg", alt: "Eco Grow Bags" },
+  { src: "/Images/Growbags.jpg", alt: "Eco Grow Bags" },
   { src: "/Images/CoirProducts.jpg", alt: "Coir Products" }, 
   { src: "/Images/Pithblock.jpg", alt: "Coir Pith Block" },
-  { src: "/Images/Uses.jpg", alt: "Applications of Coir Products" }
+  { src: "/Images/Uses.jpg", alt: "Applications of Coir Products" },
+  { src: "/Images/Bags.jpg", alt: "Coir Basket (Alternate)" },
+  { src: "/Images/CoirSubstrate.jpg", alt: "Coir Substrate" },
+  { src: "/Images/SupportServices.jpg", alt: "Support Services" }
 ];
 
 const Gallery = () => (

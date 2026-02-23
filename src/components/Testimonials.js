@@ -1,4 +1,6 @@
 import React from "react";
+import "./Testimonials.css";
+
 
 const testimonials = [
   { name: "Ravi", text: "The coir baskets are durable and eco‑friendly!" },

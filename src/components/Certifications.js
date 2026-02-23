@@ -1,4 +1,6 @@
 import React from "react";
+import "./Certifications.css";
+
 
 const certifications = [
   { title: "ISO Certified", description: "Quality management certification." },
