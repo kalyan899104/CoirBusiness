@@ -34,7 +34,7 @@ function Products() {
 
         {/* New product cards using your images */}
         <div className="product-card">
-          <img src="/Images/Coir-products.jpg" alt="Coir Products" />
+          <img src="/Images/CoirProducts.jpg" alt="Coir Products" />
           <h3>Coir Products</h3>
           <p>
             Eco-friendly coir solutions crafted for gardening, agriculture, 
@@ -42,7 +42,7 @@ function Products() {
           </p>
         </div>
         <div className="product-card">
-          <img src="/Images/Bas.jpg" alt="Coir Basket" />
+          <img src="/Images/Bags.jpg" alt="Coir Basket" />
           <h3>Coir Basket</h3>
           <p>
             Strong and natural coir baskets, ideal for decorative and 
