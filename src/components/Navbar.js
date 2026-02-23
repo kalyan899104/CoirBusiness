@@ -1,4 +1,5 @@
 import React from "react";
+import "./Navbar.css";
 
 const Navbar = () => {
   const handleScroll = (id) => {
@@ -10,11 +11,15 @@ const Navbar = () => {
 
   return (
     <header className="navbar">
-      <h1 className="logo">Sri Ecovibe Substrates</h1>
+      {/* Logo image */}
+      <img src="/Images/logo.png" alt="Sri Ecovibe Logo" className="logo" />
+
+      {/* Navigation links */}
       <nav>
-        <ul>
+        <ul className="nav-links">
           <li><button onClick={() => handleScroll("about")}>About</button></li>
           <li><button onClick={() => handleScroll("products")}>Products</button></li>
+          <li><button onClick={() => handleScroll("promise")}>Promise</button></li>
           <li><button onClick={() => handleScroll("benefits")}>Benefits</button></li>
           <li><button onClick={() => handleScroll("gallery")}>Gallery</button></li>
           <li><button onClick={() => handleScroll("stats")}>Stats</button></li>
