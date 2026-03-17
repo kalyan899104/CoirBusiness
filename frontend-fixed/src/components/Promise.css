@@ -1,0 +1,39 @@
+.promise {
+  background: linear-gradient(to right, #f0fff0, #e6ffe6);
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.promise h2 {
+  font-size: 2rem;
+  color: #2e8b57;
+  margin-bottom: 15px;
+}
+
+.promise p {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 30px;
+}
+
+.promise-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.promise-item {
+  background: white;
+  border: 2px solid #2e8b57;
+  border-radius: 8px;
+  padding: 15px 25px;
+  font-weight: bold;
+  color: #2e8b57;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.promise-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
