@@ -1,5 +1,6 @@
 [build]
-  command = "npm run build"
+  base = "frontend-fixed"
+  command = "npm install && CI='' npm run build"
   publish = "build"
 
 [build.environment]
