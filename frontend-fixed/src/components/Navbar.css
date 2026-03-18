@@ -15,7 +15,6 @@
   margin-right: 20px;
 }
 
-
 .nav-links {
   list-style: none;
   display: flex;
@@ -36,13 +35,48 @@
   color: #4CAF50; /* eco-friendly accent */
 }
 
+/* Hamburger button (hidden on desktop) */
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Mobile styles */
 @media (max-width: 768px) {
   .logo {
     height: 50px; /* shrink logo on mobile */
   }
 
+  .hamburger {
+    display: block; /* show hamburger on mobile */
+  }
+
   .nav-links {
-    gap: 10px;
-    font-size: 0.9rem;
+    display: none; /* hide links by default */
+    flex-direction: column;
+    background: #fff;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .nav-links.open {
+    display: flex; /* show links when hamburger clicked */
+    animation: slideDown 0.3s ease; /* smooth animation */
+  }
+}
+
+/* Slide-down animation */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

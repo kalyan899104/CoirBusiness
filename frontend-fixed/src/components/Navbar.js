@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Navbar.css";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   const handleScroll = (id) => {
     const section = document.getElementById(id);
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
+      setIsOpen(false); // close menu after clicking a link
     }
   };
 
@@ -14,9 +17,18 @@ const Navbar = () => {
       {/* Logo image */}
       <img src="/Images/logo.png" alt="Sri Ecovibe Logo" className="logo" />
 
+      {/* Hamburger toggle button (mobile only) */}
+      <button
+        className="hamburger"
+        onClick={() => setIsOpen(!isOpen)}
+        aria-label="Toggle navigation"
+      >
+        {isOpen ? "✖" : "☰"}
+      </button>
+
       {/* Navigation links */}
       <nav>
-        <ul className="nav-links">
+        <ul className={`nav-links ${isOpen ? "open" : ""}`}>
           <li><button onClick={() => handleScroll("about")}>About</button></li>
           <li><button onClick={() => handleScroll("products")}>Products</button></li>
           <li><button onClick={() => handleScroll("promise")}>Promise</button></li>
