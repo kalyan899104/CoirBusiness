@@ -11,7 +11,7 @@
 }
 
 .logo {
-  height: 90px;   /* increase from 50px to 90px */
+  height: 90px;   /* desktop logo size */
   margin-right: 20px;
 }
 
@@ -47,8 +47,12 @@
 
 /* Mobile styles */
 @media (max-width: 768px) {
+  .navbar {
+    padding: 8px 16px;   /* slimmer header on mobile */
+  }
+
   .logo {
-    height: 50px; /* shrink logo on mobile */
+    height: 40px;        /* smaller logo */
   }
 
   .hamburger {
@@ -69,7 +73,7 @@
     top: 100%;   /* dropdown below navbar */
     left: 0;
     width: 100%;
-    background: #f9f9f9; /* light grey background for contrast */
+    background: #f9f9f9;
     border-top: 1px solid #ddd;
     box-shadow: 0 4px 8px rgba(0,0,0,0.15);
     animation: slideDown 0.3s ease;
@@ -105,4 +109,10 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Scroll offset so sections aren’t hidden behind sticky header */
+#about, #products, #promise, #benefits, #gallery,
+#stats, #testimonials, #faqs, #certifications, #contact {
+  scroll-margin-top: 80px; /* adjust to match mobile navbar height */
 }
