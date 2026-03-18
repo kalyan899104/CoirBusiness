@@ -21,17 +21,10 @@ const Market = () => {
         <p>Southeast Asia & Europe</p>
       </div>
 
-      <div className="market-tip">
-        <h3>💡 Pro Tip (Export Strategy)</h3>
-        <ul>
-          <li>Start with <strong>Netherlands</strong> → gateway to full Europe</li>
-          <li>Target <strong>USA</strong> for branded/retail packs (higher profits)</li>
-          <li>Use <strong>Vietnam/China</strong> for bulk orders to maintain volume</li>
-        </ul>
-      </div>
+      {/* ✅ Removed Pro Tip section */}
 
       <div className="market-focus">
-        <h3>Key Focus Countries (from Suresh@vizag)</h3>
+        <h3>Key Focus Countries</h3> {/* ✅ Simplified heading */}
         <p>India, Netherlands, China, Germany, USA</p>
       </div>
     </section>

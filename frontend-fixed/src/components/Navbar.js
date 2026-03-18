@@ -14,12 +14,12 @@ const Navbar = () => {
 
   return (
     <header className="navbar">
-      {/* Logo row */}
+      {/* Logo */}
       <div className="navbar-top">
         <img src="/Images/logo.png" alt="Sri Ecovibe Logo" className="logo" />
       </div>
 
-      {/* Hamburger toggle below logo */}
+      {/* Hamburger (mobile only, hidden on desktop via CSS) */}
       <div className="navbar-toggle">
         <button
           className="hamburger"

@@ -5,7 +5,7 @@
   border-radius: 8px;
 }
 
-.market-block, .market-tip, .market-focus {
+.market-block, .market-focus {
   background: #f1f8e9;
   margin: 20px auto;
   padding: 20px;
@@ -15,7 +15,7 @@
   transition: transform 0.3s ease;
 }
 
-.market-block:hover, .market-tip:hover, .market-focus:hover {
+.market-block:hover, .market-focus:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }

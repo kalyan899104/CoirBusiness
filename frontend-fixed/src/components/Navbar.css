@@ -1,50 +1,29 @@
-/* Base Navbar */
+/* Base Navbar (Desktop) */
 .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 14px;              /* reduced padding */
   background: var(--primary-color);
   color: #fff;
   position: sticky;
   top: 0;
   z-index: 1000;
-  padding: 12px 20px;
-  display: flex;
-  flex-direction: column; /* stack logo, hamburger, nav vertically */
-  align-items: flex-start;
-}
-
-.navbar-top {
-  width: 100%;
+  height: 45px;                   /* compact header height */
 }
 
 .logo {
-  max-height: 60px;
+  max-height: 28px;               /* smaller logo */
   height: auto;
   width: auto;
   object-fit: contain;
+  margin-right: 16px;
 }
 
-/* Hamburger below logo */
-.navbar-toggle {
-  margin-top: 8px;
-}
-
-.hamburger {
-  font-size: 2rem;
-  background: none;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-
-.hamburger:hover {
-  color: var(--accent-color);
-}
-
-/* Nav links */
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 16px;
 }
 
 .nav-links button {
@@ -61,13 +40,49 @@
   color: var(--accent-color);
 }
 
+/* Hamburger button hidden on desktop */
+.hamburger {
+  display: none;                  /* ✅ hidden on desktop */
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.hamburger:hover {
+  color: var(--accent-color);
+}
+
 /* Mobile styles */
 @media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;       /* stack logo, hamburger, nav vertically */
+    align-items: flex-start;
+    padding: 8px 12px;
+    height: auto;
+  }
+
+  .logo {
+    order: 0;
+    max-height: 32px;
+    margin-bottom: 6px;
+  }
+
+  .hamburger {
+    order: 1;
+    display: block;               /* ✅ visible only on mobile */
+    align-self: flex-start;
+    font-size: 2.2rem;
+    margin-bottom: 8px;
+  }
+
   .nav-links {
     display: none;
     flex-direction: column;
     width: 100%;
-    margin-top: 10px;
+    margin-top: 6px;
   }
 
   .nav-links.open {
