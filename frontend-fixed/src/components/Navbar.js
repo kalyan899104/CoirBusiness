@@ -7,7 +7,8 @@ const Navbar = () => {
   const handleScroll = (id) => {
     const section = document.getElementById(id);
     if (section) {
-      const headerOffset = 65; // adjust to match header height
+      // ✅ Adjust offset to match your sticky header height
+      const headerOffset = 70; // try 70px, tweak if needed
       const elementPosition = section.getBoundingClientRect().top + window.pageYOffset;
       const offsetPosition = elementPosition - headerOffset;
 
@@ -22,10 +23,8 @@ const Navbar = () => {
 
   return (
     <header className="navbar">
-      {/* Logo */}
       <img src="/Images/logo.png" alt="Sri Ecovibe Logo" className="logo" />
 
-      {/* Hamburger (mobile only, hidden on desktop via CSS) */}
       <button
         className="hamburger"
         onClick={() => setIsOpen(!isOpen)}
@@ -34,7 +33,6 @@ const Navbar = () => {
         {isOpen ? "✖" : "☰"}
       </button>
 
-      {/* Navigation links */}
       <nav>
         <ul className={`nav-links ${isOpen ? "open" : ""}`}>
           <li><button onClick={() => handleScroll("about")}>About</button></li>
