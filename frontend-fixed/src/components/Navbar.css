@@ -3,17 +3,17 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 6px 14px;              /* reduced padding */
+  padding: 10px 18px;              /* slightly larger padding */
   background: var(--primary-color);
   color: #fff;
   position: sticky;
   top: 0;
   z-index: 1000;
-  height: 45px;                   /* compact header height */
+  height: 52px;                   /* increased ~15% from 45px */
 }
 
 .logo {
-  max-height: 28px;               /* smaller logo */
+  max-height: 34px;               /* scaled up with header */
   height: auto;
   width: auto;
   object-fit: contain;
@@ -23,7 +23,7 @@
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 16px;
+  gap: 18px;
 }
 
 .nav-links button {
@@ -40,9 +40,9 @@
   color: var(--accent-color);
 }
 
-/* Hamburger button hidden on desktop */
+/* Hamburger hidden on desktop */
 .hamburger {
-  display: none;                  /* ✅ hidden on desktop */
+  display: none;
   font-size: 2rem;
   background: none;
   border: none;
@@ -58,7 +58,7 @@
 /* Mobile styles */
 @media (max-width: 768px) {
   .navbar {
-    flex-direction: column;       /* stack logo, hamburger, nav vertically */
+    flex-direction: column;
     align-items: flex-start;
     padding: 8px 12px;
     height: auto;
@@ -66,13 +66,13 @@
 
   .logo {
     order: 0;
-    max-height: 32px;
+    max-height: 36px;             /* slightly larger logo for mobile */
     margin-bottom: 6px;
   }
 
   .hamburger {
     order: 1;
-    display: block;               /* ✅ visible only on mobile */
+    display: block;               /* visible only on mobile */
     align-self: flex-start;
     font-size: 2.2rem;
     margin-bottom: 8px;
