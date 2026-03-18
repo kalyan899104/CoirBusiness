@@ -8,7 +8,7 @@ const Navbar = () => {
     const section = document.getElementById(id);
     if (section) {
       // ✅ Adjust offset to match your sticky header height
-      const headerOffset = 70; // try 70px, tweak if needed
+      const headerOffset = 60; // try 70px, tweak if needed
       const elementPosition = section.getBoundingClientRect().top + window.pageYOffset;
       const offsetPosition = elementPosition - headerOffset;
 
