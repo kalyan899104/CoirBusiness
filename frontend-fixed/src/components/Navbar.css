@@ -3,17 +3,17 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 18px;              /* slightly larger padding */
+  padding: 12px 20px;              /* slightly larger padding */
   background: var(--primary-color);
   color: #fff;
   position: sticky;
   top: 0;
   z-index: 1000;
-  height: 52px;                   /* increased ~15% from 45px */
+  height: 58px;                   /* increased ~20% */
 }
 
 .logo {
-  max-height: 34px;               /* scaled up with header */
+  max-height: 42px;               /* ✅ larger logo */
   height: auto;
   width: auto;
   object-fit: contain;
@@ -60,13 +60,13 @@
   .navbar {
     flex-direction: column;
     align-items: flex-start;
-    padding: 8px 12px;
+    padding: 10px 14px;
     height: auto;
   }
 
   .logo {
     order: 0;
-    max-height: 36px;             /* slightly larger logo for mobile */
+    max-height: 44px;             /* ✅ bigger logo on mobile */
     margin-bottom: 6px;
   }
 
@@ -74,7 +74,7 @@
     order: 1;
     display: block;               /* visible only on mobile */
     align-self: flex-start;
-    font-size: 2.2rem;
+    font-size: 2.4rem;
     margin-bottom: 8px;
   }
 
@@ -122,9 +122,4 @@
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-/* ✅ Scroll offset fix for sticky header */
-#about, #products, #benefits, #gallery, #resources, #market, #enquire {
-  scroll-margin-top: 70px; /* ensures section is visible below sticky header */
 }
