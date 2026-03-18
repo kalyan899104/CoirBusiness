@@ -6,9 +6,10 @@ const Navbar = () => {
 
   const handleScroll = (id) => {
     const section = document.getElementById(id);
-    if (section) {
-      // ✅ Adjust offset to match your sticky header height
-      const headerOffset = 60; // try 70px, tweak if needed
+    const header = document.querySelector(".navbar"); // ✅ get actual header element
+
+    if (section && header) {
+      const headerOffset = header.offsetHeight; // ✅ dynamic height
       const elementPosition = section.getBoundingClientRect().top + window.pageYOffset;
       const offsetPosition = elementPosition - headerOffset;
 
