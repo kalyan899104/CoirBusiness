@@ -58,20 +58,40 @@
   .nav-links {
     display: none; /* hide links by default */
     flex-direction: column;
-    background: #fff;
     width: 100%;
-    padding: 10px 0;
+    padding: 0;
+    margin: 0;
   }
 
   .nav-links.open {
     display: flex; /* show links when hamburger clicked */
-    position: absolute;   /* dropdown below navbar */
-    top: 100%;
+    position: absolute;
+    top: 100%;   /* dropdown below navbar */
     left: 0;
-    background: #fff;
     width: 100%;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    background: #f9f9f9; /* light grey background for contrast */
+    border-top: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
     animation: slideDown 0.3s ease;
+    z-index: 999;
+  }
+
+  .nav-links.open li {
+    padding: 12px 20px;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+  }
+
+  .nav-links.open button {
+    width: 100%;
+    text-align: left;
+    color: #333;
+    font-size: 1rem;
+  }
+
+  .nav-links.open button:hover {
+    background: #e8f5e9; /* subtle eco-green hover background */
+    color: #4CAF50;
   }
 }
 
