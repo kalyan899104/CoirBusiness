@@ -3,8 +3,8 @@
   align-items: center;
   justify-content: space-between;
   padding: 12px 20px;
-  background: #fff;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  background: var(--primary-color); /* eco green */
+  color: #fff;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -30,13 +30,13 @@
   border: none;
   font: inherit;
   cursor: pointer;
-  color: #333;
+  color: #fff; /* white text on green header */
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
 .nav-links button:hover {
-  color: #4CAF50;
+  color: var(--accent-color); /* eco-friendly accent green */
 }
 
 /* Hamburger button */
@@ -45,14 +45,14 @@
   font-size: 2.4rem;
   background: none;
   border: none;
-  color: #000 !important;
+  color: #fff !important; /* white for contrast on green */
   cursor: pointer;
   font-weight: bold;
   transition: color 0.3s ease;
 }
 
 .hamburger:hover {
-  color: #4CAF50;
+  color: var(--accent-color);
 }
 
 /* Mobile styles */
@@ -60,8 +60,8 @@
   .navbar {
     flex-direction: column;   /* stack items vertically */
     align-items: flex-start;  /* align to the left */
-    padding: 6px 12px !important;
-    height: auto !important;  /* allow stacked height */
+    padding: 4px 12px !important;
+    height: auto !important;
   }
 
   .logo {
@@ -74,16 +74,16 @@
     order: 1;
     display: block;
     align-self: flex-start;
-    font-size: 2.4rem;
-    color: #111 !important;
+    font-size: 2.8rem;
+    color: #fff !important;
     margin-bottom: 6px;
   }
 
   .nav-links {
     display: none !important;
     flex-direction: column;
-    width: auto;              /* compact width */
-    min-width: 200px;         /* fixed panel width */
+    width: auto;
+    min-width: 200px;
     padding: 0;
     margin: 0;
   }
@@ -91,7 +91,7 @@
   .nav-links.open {
     display: flex !important;
     position: absolute;
-    top: 100%;                /* below header */
+    top: 100%;
     left: 0;
     background: #f9f9f9;
     border: 1px solid #ddd;
@@ -115,7 +115,7 @@
 
   .nav-links.open button:hover {
     background: #e8f5e9;
-    color: #4CAF50;
+    color: var(--accent-color);
   }
 }
 
@@ -128,10 +128,4 @@
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-/* Scroll offset for new section IDs */
-#about, #products, #benefits, #gallery,
-#resources, #enquire {
-  scroll-margin-top: 50px;
 }
