@@ -7,8 +7,7 @@ const Navbar = () => {
   const handleScroll = (id) => {
     const section = document.getElementById(id);
     if (section) {
-      // ✅ Adjust offset to match header height
-      const headerOffset = 65; // adjust this to your actual header height
+      const headerOffset = 65; // adjust to match header height
       const elementPosition = section.getBoundingClientRect().top + window.pageYOffset;
       const offsetPosition = elementPosition - headerOffset;
 
@@ -24,20 +23,16 @@ const Navbar = () => {
   return (
     <header className="navbar">
       {/* Logo */}
-      <div className="navbar-top">
-        <img src="/Images/logo.png" alt="Sri Ecovibe Logo" className="logo" />
-      </div>
+      <img src="/Images/logo.png" alt="Sri Ecovibe Logo" className="logo" />
 
       {/* Hamburger (mobile only, hidden on desktop via CSS) */}
-      <div className="navbar-toggle">
-        <button
-          className="hamburger"
-          onClick={() => setIsOpen(!isOpen)}
-          aria-label="Toggle navigation"
-        >
-          {isOpen ? "✖" : "☰"}
-        </button>
-      </div>
+      <button
+        className="hamburger"
+        onClick={() => setIsOpen(!isOpen)}
+        aria-label="Toggle navigation"
+      >
+        {isOpen ? "✖" : "☰"}
+      </button>
 
       {/* Navigation links */}
       <nav>

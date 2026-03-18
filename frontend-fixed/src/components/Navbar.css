@@ -1,3 +1,4 @@
+/* Base Navbar (Desktop) */
 .navbar {
   display: flex;
   align-items: center;
@@ -12,11 +13,32 @@
 }
 
 .logo {
-  max-height: 48px; /* ✅ bigger logo */
+  max-height: 50px; /* bigger logo */
   height: auto;
   width: auto;
   object-fit: contain;
   margin-right: 16px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;          /* ✅ horizontal on desktop */
+  flex-direction: row;
+  gap: 18px;
+}
+
+.nav-links button {
+  background: none;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  color: #fff;            /* ✅ always white */
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links button:hover {
+  color: var(--accent-color);
 }
 
 /* Hamburger hidden on desktop */
@@ -44,30 +66,28 @@
   }
 
   .logo {
-    order: 0;
-    max-height: 50px; /* ✅ larger logo on mobile */
+    max-height: 52px; /* ✅ larger logo on mobile */
     margin-bottom: 6px;
   }
 
   .hamburger {
-    order: 1;
-    display: block;
+    display: block; /* visible only on mobile */
     align-self: flex-start;
     font-size: 2.4rem;
     margin-bottom: 8px;
   }
 
   .nav-links {
-    display: none;
-    flex-direction: column;
+    display: none;          /* hidden until hamburger clicked */
+    flex-direction: column; /* ✅ vertical only on mobile */
     width: 100%;
     margin-top: 6px;
   }
 
   .nav-links.open {
     display: flex;
-    background: #f9f9f9;
-    border: 1px solid #ddd;
+    background: var(--primary-color); /* ✅ keep same background */
+    border: none;
     box-shadow: 0 4px 8px rgba(0,0,0,0.15);
     animation: slideDown 0.3s ease;
     width: 100%;
@@ -75,19 +95,19 @@
 
   .nav-links.open li {
     padding: 10px 16px;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
     text-align: left;
   }
 
   .nav-links.open button {
     width: 100%;
     text-align: left;
-    color: #333;
+    color: #fff;   /* ✅ keep white text */
     font-size: 0.95rem;
   }
 
   .nav-links.open button:hover {
-    background: #e8f5e9;
+    background: rgba(255,255,255,0.1);
     color: var(--accent-color);
   }
 }
