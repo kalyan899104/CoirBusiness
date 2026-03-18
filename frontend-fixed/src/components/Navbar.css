@@ -123,3 +123,8 @@
     transform: translateY(0);
   }
 }
+
+/* ✅ Scroll offset fix for sticky header */
+#about, #products, #benefits, #gallery, #resources, #market, #enquire {
+  scroll-margin-top: 70px; /* ensures section is visible below sticky header */
+}
