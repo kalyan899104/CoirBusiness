@@ -1,14 +1,18 @@
+/* Base Navbar */
 .navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 12px 20px;
-  background: var(--primary-color); /* eco green */
+  background: var(--primary-color);
   color: #fff;
   position: sticky;
   top: 0;
   z-index: 1000;
-  height: 70px; /* desktop height */
+  padding: 12px 20px;
+  display: flex;
+  flex-direction: column; /* stack logo, hamburger, nav vertically */
+  align-items: flex-start;
+}
+
+.navbar-top {
+  width: 100%;
 }
 
 .logo {
@@ -16,9 +20,27 @@
   height: auto;
   width: auto;
   object-fit: contain;
-  margin-right: 20px;
 }
 
+/* Hamburger below logo */
+.navbar-toggle {
+  margin-top: 8px;
+}
+
+.hamburger {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.hamburger:hover {
+  color: var(--accent-color);
+}
+
+/* Nav links */
 .nav-links {
   list-style: none;
   display: flex;
@@ -30,74 +52,31 @@
   border: none;
   font: inherit;
   cursor: pointer;
-  color: #fff; /* white text on green header */
+  color: #fff;
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
 .nav-links button:hover {
-  color: var(--accent-color); /* eco-friendly accent green */
-}
-
-/* Hamburger button */
-.hamburger {
-  display: none;
-  font-size: 2.4rem;
-  background: none;
-  border: none;
-  color: #fff !important; /* white for contrast on green */
-  cursor: pointer;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-.hamburger:hover {
   color: var(--accent-color);
 }
 
 /* Mobile styles */
 @media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;   /* stack items vertically */
-    align-items: flex-start;  /* align to the left */
-    padding: 4px 12px !important;
-    height: auto !important;
-  }
-
-  .logo {
-    order: 0;
-    max-height: 25px !important;
-    margin-bottom: 4px;
-  }
-
-  .hamburger {
-    order: 1;
-    display: block;
-    align-self: flex-start;
-    font-size: 2.8rem;
-    color: #fff !important;
-    margin-bottom: 6px;
-  }
-
   .nav-links {
-    display: none !important;
+    display: none;
     flex-direction: column;
-    width: auto;
-    min-width: 200px;
-    padding: 0;
-    margin: 0;
+    width: 100%;
+    margin-top: 10px;
   }
 
   .nav-links.open {
-    display: flex !important;
-    position: absolute;
-    top: 100%;
-    left: 0;
+    display: flex;
     background: #f9f9f9;
     border: 1px solid #ddd;
     box-shadow: 0 4px 8px rgba(0,0,0,0.15);
     animation: slideDown 0.3s ease;
-    z-index: 999;
+    width: 100%;
   }
 
   .nav-links.open li {

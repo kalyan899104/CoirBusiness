@@ -5,8 +5,9 @@ import About from "./components/About";
 import Products from "./components/Products";
 import Benefits from "./components/Benefits";
 import Gallery from "./components/Gallery";
-import Resources from "./components/Resources";   // ✅ merged FAQs + Testimonials
-import Enquire from "./components/Enquire";       // ✅ replaces ContactForm
+import Resources from "./components/Resources";
+import Market from "./components/Market";       // ✅ New
+import Enquire from "./components/Enquire";
 import BackToTop from "./components/BackToTop";
 import Footer from "./components/Footer";
 import "./App.css";
@@ -20,8 +21,9 @@ function App() {
       <Products />
       <Benefits />
       <Gallery />
-      <Resources />   {/* ✅ combined FAQs + Testimonials */}
-      <Enquire />     {/* ✅ renamed ContactForm */}
+      <Resources />
+      <Market />        {/* ✅ Market Insight Section */}
+      <Enquire />
       <BackToTop />
       <Footer />
     </div>
