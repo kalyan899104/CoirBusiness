@@ -39,13 +39,20 @@
   color: #4CAF50;
 }
 
+/* Hamburger button */
 .hamburger {
   display: none;
-  font-size: 1.8rem;
+  font-size: 2.4rem;       /* bigger size */
   background: none;
   border: none;
-  color: #333;
+  color: #000 !important;  /* pure black for maximum contrast */
   cursor: pointer;
+  font-weight: bold;       /* thicker/brighter lines */
+  transition: color 0.3s ease;
+}
+
+.hamburger:hover {
+  color: #4CAF50;          /* eco-green highlight on hover/tap */
 }
 
 /* Mobile styles */
@@ -64,11 +71,12 @@
 
   .hamburger {
     display: block;
+    font-size: 2.8rem;     /* even larger on mobile */
+    color: #111 !important;
   }
 
-  /* Hide nav links completely until ☰ is clicked */
   .nav-links {
-    display: none !important; 
+    display: none !important;
     flex-direction: column;
     width: 100%;
     padding: 0;
@@ -76,7 +84,7 @@
   }
 
   .nav-links.open {
-    display: flex !important; /* only show when toggled */
+    display: flex !important;
     position: absolute;
     top: 100%;
     left: 0;
