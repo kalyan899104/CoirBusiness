@@ -114,5 +114,5 @@
 /* Scroll offset so sections aren’t hidden behind sticky header */
 #about, #products, #promise, #benefits, #gallery,
 #stats, #testimonials, #faqs, #certifications, #contact {
-  scroll-margin-top: 80px; /* adjust to match mobile navbar height */
+  scroll-margin-top: 60px; /* matches mobile header height */
 }
