@@ -48,11 +48,11 @@
 /* Mobile styles */
 @media (max-width: 768px) {
   .navbar {
-    padding: 6px 12px !important;   /* slimmer header */
+    padding: 4px 12px !important;   /* much slimmer header */
   }
 
   .logo {
-    height: 34px !important;        /* smaller logo */
+    height: 45px !important;        /* 50% smaller logo */
   }
 
   .hamburger {
@@ -114,5 +114,5 @@
 /* Scroll offset so sections aren’t hidden behind sticky header */
 #about, #products, #promise, #benefits, #gallery,
 #stats, #testimonials, #faqs, #certifications, #contact {
-  scroll-margin-top: 60px; /* matches mobile header height */
+  scroll-margin-top: 50px; /* matches new mobile header height */
 }
