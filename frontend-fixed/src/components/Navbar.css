@@ -65,7 +65,13 @@
 
   .nav-links.open {
     display: flex; /* show links when hamburger clicked */
-    animation: slideDown 0.3s ease; /* smooth animation */
+    position: absolute;   /* dropdown below navbar */
+    top: 100%;
+    left: 0;
+    background: #fff;
+    width: 100%;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    animation: slideDown 0.3s ease;
   }
 }
 
