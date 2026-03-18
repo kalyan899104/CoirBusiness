@@ -3,14 +3,10 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Products from "./components/Products";
-import Promise from "./components/Promise";   // ✅ New component
 import Benefits from "./components/Benefits";
 import Gallery from "./components/Gallery";
-import Stats from "./components/Stats";
-import Testimonials from "./components/Testimonials";
-import FAQs from "./components/FAQs";
-import Certifications from "./components/Certifications";
-import ContactForm from "./components/ContactForm";
+import Resources from "./components/Resources";   // ✅ merged FAQs + Testimonials
+import Enquire from "./components/Enquire";       // ✅ replaces ContactForm
 import BackToTop from "./components/BackToTop";
 import Footer from "./components/Footer";
 import "./App.css";
@@ -22,14 +18,10 @@ function App() {
       <Hero />
       <About />
       <Products />
-      <Promise />   {/* ✅ Added here */}
       <Benefits />
       <Gallery />
-      <Stats />
-      <Testimonials />
-      <FAQs />
-      <Certifications />
-      <ContactForm />
+      <Resources />   {/* ✅ combined FAQs + Testimonials */}
+      <Enquire />     {/* ✅ renamed ContactForm */}
       <BackToTop />
       <Footer />
     </div>

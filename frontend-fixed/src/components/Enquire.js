@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const ContactForm = () => {
+const Enquire = () => {
   const [status, setStatus] = useState(""); // track form status
 
   const handleSubmit = async (e) => {
@@ -26,9 +26,9 @@ const ContactForm = () => {
   };
 
   return (
-    <section id="contact" className="contact-form">
-      <h2>Contact Us</h2>
-      <div className="contact-details">
+    <section id="enquire" className="enquire-form">
+      <h2>Enquire Now</h2>
+      <div className="enquire-details">
         <p><strong>Email:</strong> ecoir@sriecovibe.com</p>
         <p><strong>Phone:</strong> +91 8807606963</p>
       </div>
@@ -40,10 +40,14 @@ const ContactForm = () => {
       </form>
 
       {/* Show confirmation messages */}
-      {status === "SUCCESS" && <p style={{ color: "green" }}>Thanks! Your message has been sent.</p>}
-      {status === "ERROR" && <p style={{ color: "red" }}>Oops! Something went wrong. Please try again.</p>}
+      {status === "SUCCESS" && (
+        <p style={{ color: "green" }}>Thanks! Your enquiry has been sent.</p>
+      )}
+      {status === "ERROR" && (
+        <p style={{ color: "red" }}>Oops! Something went wrong. Please try again.</p>
+      )}
     </section>
   );
 };
 
-export default ContactForm;
+export default Enquire;

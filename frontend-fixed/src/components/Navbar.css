@@ -42,43 +42,48 @@
 /* Hamburger button */
 .hamburger {
   display: none;
-  font-size: 2.4rem;       /* bigger size */
+  font-size: 2.4rem;
   background: none;
   border: none;
-  color: #000 !important;  /* pure black for maximum contrast */
+  color: #000 !important;
   cursor: pointer;
-  font-weight: bold;       /* thicker/brighter lines */
+  font-weight: bold;
   transition: color 0.3s ease;
 }
 
 .hamburger:hover {
-  color: #4CAF50;          /* eco-green highlight on hover/tap */
+  color: #4CAF50;
 }
 
 /* Mobile styles */
 @media (max-width: 768px) {
   .navbar {
-    padding: 4px 12px !important;
-    height: 45px !important;
+    flex-direction: column;   /* stack items vertically */
+    align-items: flex-start;  /* align to the left */
+    padding: 6px 12px !important;
+    height: auto !important;  /* allow stacked height */
   }
 
   .logo {
+    order: 0;
     max-height: 25px !important;
-    height: auto;
-    width: auto;
-    object-fit: contain;
+    margin-bottom: 4px;
   }
 
   .hamburger {
+    order: 1;
     display: block;
-    font-size: 2.8rem;     /* even larger on mobile */
+    align-self: flex-start;
+    font-size: 2.4rem;
     color: #111 !important;
+    margin-bottom: 6px;
   }
 
   .nav-links {
     display: none !important;
     flex-direction: column;
-    width: 100%;
+    width: auto;              /* compact width */
+    min-width: 200px;         /* fixed panel width */
     padding: 0;
     margin: 0;
   }
@@ -86,18 +91,17 @@
   .nav-links.open {
     display: flex !important;
     position: absolute;
-    top: 100%;
+    top: 100%;                /* below header */
     left: 0;
-    width: 100%;
     background: #f9f9f9;
-    border-top: 1px solid #ddd;
+    border: 1px solid #ddd;
     box-shadow: 0 4px 8px rgba(0,0,0,0.15);
     animation: slideDown 0.3s ease;
     z-index: 999;
   }
 
   .nav-links.open li {
-    padding: 12px 20px;
+    padding: 10px 16px;
     border-bottom: 1px solid #eee;
     text-align: left;
   }
@@ -106,7 +110,7 @@
     width: 100%;
     text-align: left;
     color: #333;
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 
   .nav-links.open button:hover {
@@ -126,8 +130,8 @@
   }
 }
 
-/* Scroll offset */
-#about, #products, #promise, #benefits, #gallery,
-#stats, #testimonials, #faqs, #certifications, #contact {
+/* Scroll offset for new section IDs */
+#about, #products, #benefits, #gallery,
+#resources, #enquire {
   scroll-margin-top: 50px;
 }
