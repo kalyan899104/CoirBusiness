@@ -7,9 +7,16 @@ const Navbar = () => {
   const handleScroll = (id) => {
     const section = document.getElementById(id);
     if (section) {
-      const yOffset = -70; // ✅ offset for sticky header
-      const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
-      window.scrollTo({ top: y, behavior: "smooth" });
+      // ✅ Adjust offset to match header height
+      const headerOffset = 65; // adjust this to your actual header height
+      const elementPosition = section.getBoundingClientRect().top + window.pageYOffset;
+      const offsetPosition = elementPosition - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+
       setIsOpen(false);
     }
   };

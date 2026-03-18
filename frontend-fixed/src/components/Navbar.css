@@ -1,43 +1,22 @@
-/* Base Navbar (Desktop) */
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 12px 20px;              /* slightly larger padding */
+  padding: 12px 20px;
   background: var(--primary-color);
   color: #fff;
   position: sticky;
   top: 0;
   z-index: 1000;
-  height: 58px;                   /* increased ~20% */
+  height: 60px; /* slightly larger header */
 }
 
 .logo {
-  max-height: 42px;               /* ✅ larger logo */
+  max-height: 48px; /* ✅ bigger logo */
   height: auto;
   width: auto;
   object-fit: contain;
   margin-right: 16px;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 18px;
-}
-
-.nav-links button {
-  background: none;
-  border: none;
-  font: inherit;
-  cursor: pointer;
-  color: #fff;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-.nav-links button:hover {
-  color: var(--accent-color);
 }
 
 /* Hamburger hidden on desktop */
@@ -66,13 +45,13 @@
 
   .logo {
     order: 0;
-    max-height: 44px;             /* ✅ bigger logo on mobile */
+    max-height: 50px; /* ✅ larger logo on mobile */
     margin-bottom: 6px;
   }
 
   .hamburger {
     order: 1;
-    display: block;               /* visible only on mobile */
+    display: block;
     align-self: flex-start;
     font-size: 2.4rem;
     margin-bottom: 8px;
