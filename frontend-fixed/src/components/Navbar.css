@@ -8,14 +8,14 @@
   position: sticky;
   top: 0;
   z-index: 1000;
-  height: 70px; /* fixed desktop height */
+  height: 70px; /* desktop height */
 }
 
 .logo {
-  max-height: 60px;   /* constrain desktop logo */
+  max-height: 60px;
   height: auto;
   width: auto;
-  object-fit: contain; /* prevent stretching */
+  object-fit: contain;
   margin-right: 20px;
 }
 
@@ -52,11 +52,11 @@
 @media (max-width: 768px) {
   .navbar {
     padding: 4px 12px !important;
-    height: 45px !important; /* force header to half size */
+    height: 45px !important;
   }
 
   .logo {
-    max-height: 25px !important; /* shrink logo drastically */
+    max-height: 25px !important;
     height: auto;
     width: auto;
     object-fit: contain;
@@ -66,8 +66,9 @@
     display: block;
   }
 
+  /* Hide nav links completely until ☰ is clicked */
   .nav-links {
-    display: none;
+    display: none !important; 
     flex-direction: column;
     width: 100%;
     padding: 0;
@@ -75,7 +76,7 @@
   }
 
   .nav-links.open {
-    display: flex;
+    display: flex !important; /* only show when toggled */
     position: absolute;
     top: 100%;
     left: 0;
@@ -120,5 +121,5 @@
 /* Scroll offset */
 #about, #products, #promise, #benefits, #gallery,
 #stats, #testimonials, #faqs, #certifications, #contact {
-  scroll-margin-top: 50px; /* matches new mobile header height */
+  scroll-margin-top: 50px;
 }
