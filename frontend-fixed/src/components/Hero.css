@@ -3,8 +3,9 @@
 .hero {
   height: 100vh;                /* full viewport height */
   background-size: contain;     /* show the whole image */
-  background-position: center;  /* center the image */
-  background-repeat: no-repeat; /* prevent tiling */
+  background-position: center;  /* keep it centered */
+  background-repeat: no-repeat; /* no tiling */
+  background-color: #f0f0f0;    /* fallback color for empty space */
   color: white;
   text-align: center;
   padding: 80px 20px;
