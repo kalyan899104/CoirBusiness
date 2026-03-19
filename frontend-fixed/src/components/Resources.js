@@ -1,6 +1,7 @@
 import React from "react";
 import "./FAQ.css";           // keep FAQ styles
 import "./Testimonials.css";  // keep Testimonials styles
+import "./Resources.css";     // optional: add if you want custom styling for resources
 
 const faqs = [
   { q: "Are coir products biodegradable?", a: "Yes, they are 100% natural and biodegradable." },
@@ -34,6 +35,16 @@ const Resources = () => (
           <strong>- {t.name}</strong>
         </div>
       ))}
+    </div>
+
+    {/* Support Services Section */}
+    <div className="support-card">
+      <img src="/Images/SupportServices.jpg" alt="Support Services" />
+      <h3>Support Services</h3>
+      <p>
+        Expert guidance and assistance for sustainable cultivation. 
+        We help you achieve better yields with eco solutions.
+      </p>
     </div>
   </section>
 );

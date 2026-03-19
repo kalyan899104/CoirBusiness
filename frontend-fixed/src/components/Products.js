@@ -23,14 +23,6 @@ function Products() {
             Ensures healthy root growth and easy handling.
           </p>
         </div>
-        <div className="product-card">
-          <img src="/Images/SupportServices.jpg" alt="Support Services" />
-          <h3>Support Services</h3>
-          <p>
-            Expert guidance and assistance for sustainable cultivation. 
-            We help you achieve better yields with eco solutions.
-          </p>
-        </div>
 
         {/* New product cards */}
         <div className="product-card">
