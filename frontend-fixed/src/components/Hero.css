@@ -1,15 +1,21 @@
 /* Hero.css */
 
 .hero {
-  height: 100vh;                  /* full viewport height */
-  background-size: contain;       /* shrink so full image fits */
-  background-position: center;    /* center the image */
+  min-height: 100vh;              /* fill screen height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  /* background image settings */
+  background-image: url("/Images/Bags.jpg"); /* ensure path is correct */
+  background-size: auto;          /* keep natural image size */
+  background-position: center center; /* keep centered */
   background-repeat: no-repeat;   /* no tiling */
   background-color: #4CAF50;      /* eco-friendly fallback color */
-  color: white;
-  text-align: center;
-  padding: 80px 20px;
   position: relative;
+  padding: 80px 20px;
+  color: white;
 }
 
 .hero::before {
@@ -20,7 +26,7 @@
 }
 
 .hero-content {
-  position: relative;             /* ensures text sits above overlay */
+  position: relative;
   max-width: 800px;
   margin: auto;
   z-index: 1;
@@ -39,7 +45,7 @@
 }
 
 .hero button {
-  background: #4CAF50;            /* eco-friendly green accent */
+  background: #4CAF50;
   color: #fff;
   border: none;
   padding: 12px 24px;
@@ -53,16 +59,14 @@
   background: #45a049;
 }
 
-/* ✅ Responsive tweaks */
+/* Responsive tweaks */
 @media (max-width: 768px) {
   .hero {
     padding: 60px 15px;
-    height: auto;                  /* let height adjust naturally */
-    min-height: 100vh;             /* still fill screen */
-    background-size: contain !important; /* force contain on mobile */
-    background-position: center;
+    background-size: auto;        /* keep image natural size */
+    background-position: center center;
     background-repeat: no-repeat;
-    background-color: #4CAF50;     /* fallback color for gaps */
+    background-color: #4CAF50;    /* fallback for gaps */
   }
 
   .hero h1 {
@@ -93,7 +97,7 @@ section h2::after {
   display: block;
   width: 60px;
   height: 3px;
-  background: #4CAF50;            /* eco-friendly green accent */
+  background: #4CAF50;
   margin: 12px auto 0;
   border-radius: 2px;
 }
