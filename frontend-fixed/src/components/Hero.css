@@ -2,20 +2,14 @@
 
 .hero {
   min-height: 100vh;              /* fill screen height */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-
-  /* background image settings */
-  background-image: url("/Images/Bags.jpg"); /* ensure path is correct */
-  background-size: auto;          /* keep natural image size */
-  background-position: center center; /* keep centered */
+  background-size: contain;       /* show full image without cropping */
+  background-position: center;    /* keep centered */
   background-repeat: no-repeat;   /* no tiling */
-  background-color: #4CAF50;      /* eco-friendly fallback color */
-  position: relative;
-  padding: 80px 20px;
+  background-color: #4CAF50;      /* fallback color for gaps */
   color: white;
+  text-align: center;
+  padding: 80px 20px;
+  position: relative;
 }
 
 .hero::before {
@@ -63,10 +57,11 @@
 @media (max-width: 768px) {
   .hero {
     padding: 60px 15px;
-    background-size: auto;        /* keep image natural size */
-    background-position: center center;
+    min-height: 100vh;
+    background-size: contain !important; /* force contain on mobile */
+    background-position: center;
     background-repeat: no-repeat;
-    background-color: #4CAF50;    /* fallback for gaps */
+    background-color: #4CAF50;
   }
 
   .hero h1 {
@@ -81,23 +76,4 @@
     padding: 10px 20px;
     font-size: 0.9rem;
   }
-}
-
-section h2 {
-  text-align: center;
-  font-size: 2rem;
-  font-weight: 600;
-  color: #222;
-  margin-bottom: 40px;
-  position: relative;
-}
-
-section h2::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 3px;
-  background: #4CAF50;
-  margin: 12px auto 0;
-  border-radius: 2px;
 }
