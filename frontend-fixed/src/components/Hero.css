@@ -1,11 +1,10 @@
-/* Hero.css */
-
 .hero {
-  min-height: 100vh;              /* fill screen height */
-  background-size: contain;       /* show full image without cropping */
-  background-position: center;    /* keep centered */
-  background-repeat: no-repeat;   /* no tiling */
-  background-color: #4CAF50;      /* fallback color for gaps */
+  min-height: 100vh;              
+  background-color: #3E2723;       /* dark brown fill for leftover space */
+  background-image: url('/Images/hero.jpg'); /* single hero image */
+  background-repeat: no-repeat;    
+  background-position: center top; 
+  background-size: contain;        
   color: white;
   text-align: center;
   padding: 80px 20px;
@@ -16,7 +15,7 @@
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0,0,0,0.5);    /* overlay for text clarity */
+  background: rgba(0,0,0,0.4);     /* overlay for text clarity */
 }
 
 .hero-content {
@@ -58,10 +57,11 @@
   .hero {
     padding: 60px 15px;
     min-height: 100vh;
-    background-size: contain !important; /* force contain on mobile */
-    background-position: center;
+    background-color: #3E2723;       /* dark brown fill */
+    background-image: url('/Images/hero.jpg');
     background-repeat: no-repeat;
-    background-color: #4CAF50;
+    background-position: center top;
+    background-size: contain !important; /* force contain on mobile */
   }
 
   .hero h1 {
