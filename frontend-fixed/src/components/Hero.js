@@ -4,7 +4,13 @@ import "./Hero.css";
 const Hero = () => (
   <section
     className="hero"
-    style={{ backgroundImage: 'url("/Images/Bags.jpg")' }} // ✅ image stays here
+    style={{
+      backgroundImage: 'url("/Images/Bags.jpg")',
+      backgroundColor: "#3E2723",
+      backgroundRepeat: "no-repeat",
+      backgroundPosition: "center top",
+      backgroundSize: "contain"
+    }}
   >
     <div className="hero-content">
       <h1>Sri Ecovibe Substrates</h1>
