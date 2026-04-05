@@ -1,10 +1,10 @@
 .hero {
   min-height: 100vh;              
   background-color: #3E2723;       /* dark brown fill for leftover space */
-  background-image: url('/Images/hero.jpg'); /* single hero image */
+  background-image: url('/Images/Bags.jpg'); /* use your actual image file */
   background-repeat: no-repeat;    
   background-position: center top; 
-  background-size: contain;        
+  background-size: contain;        /* show full image once */
   color: white;
   text-align: center;
   padding: 80px 20px;
@@ -58,7 +58,7 @@
     padding: 60px 15px;
     min-height: 100vh;
     background-color: #3E2723;       /* dark brown fill */
-    background-image: url('/Images/hero.jpg');
+    background-image: url('/Images/Bags.jpg');
     background-repeat: no-repeat;
     background-position: center top;
     background-size: contain !important; /* force contain on mobile */
