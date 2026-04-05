@@ -1,7 +1,7 @@
 .hero {
   min-height: 100vh;              
   background-color: #3E2723;       /* dark brown fill for leftover space */
-  background-image: url('/Images/Bags.jpg'); /* use your actual image file */
+  background-image: url('/Images/Bags.jpg'); /* points to public/Images/Bags.jpg */
   background-repeat: no-repeat;    
   background-position: center top; 
   background-size: contain;        /* show full image once */
